@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grant Agent | Startup Opportunities</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>🚀 Grant Agent</h2>
+    <p class="muted">YOUR STARTUP ASSISTANT</p>
+    <a class="active" href="#">Dashboard</a>
+    <a href="#opportunities">Discover Opportunities</a>
+    <a href="#matcher">AI Matcher</a>
+    <a href="#assistant">AI Assistant</a>
+  </aside>
+  <main class="main">
+    <header>
+      <p class="muted">STARTUP OPPORTUNITY FINDER</p>
+      <h1>Find your next opportunity.</h1>
+      <p>Discover grants, hackathons, competitions and accelerators.</p>
+    </header>
+    <section class="hero">
+      <p>YOUR NEXT BIG BREAK STARTS HERE</p>
+      <h2>Build something great.<br>Find the support to grow.</h2>
+      <p>Explore opportunities that fit your startup journey.</p>
+      <button id="discoverBtn">Explore opportunities →</button>
+    </section>
+    <section class="stats">
+      <div class="stat">
+        <span>Total opportunities</span>
+        <h2 id="totalCount">0</h2>
+      </div>
+      <div class="stat">
+        <span>Grants</span>
+        <h2 id="grantCount">0</h2>
+      </div>
+      <div class="stat">
+        <span>Hackathons</span>
+        <h2 id="hackathonCount">0</h2>
+      </div>
+      <div class="stat">
+        <span>Accelerators</span>
+        <h2 id="acceleratorCount">0</h2>
+      </div>
+    </section>
+    <section id="opportunities" class="section">
+      <h2>Discover opportunities</h2>
+      <p class="muted">Search the opportunity database.</p>
+      <div class="filters">
+        <input id="searchInput" type="search"
+          placeholder="Search opportunities or sectors...">
+        <select id="typeFilter">
+          <option value="All">All types</option>
+          <option value="Grant">Grants</option>
+          <option value="Hackathon">Hackathons</option>
+          <option value="Competition">Competitions</option>
+          <option value="Accelerator">Accelerators</option>
+        </select>
+        <button id="searchBtn">Search</button>
+      </div>
+      <div id="opportunityList" class="opportunity-list">
+        Loading opportunities...
+      </div>
+    </section>
+    <section id="matcher" class="section">
+      <h2>Find your best matches</h2>
+      <p class="muted">Tell us about your startup.</p>
+      <form id="matchForm" class="profile-form">
+        <label for="startupName">Startup name</label>
+        <input id="startupName" placeholder="e.g. EduSpark">
+        <label for="sector">Sector</label>
+        <select id="sector" required>
+          <option value="">Choose a sector</option>
+          <option value="AI">AI</option>
+          <option value="Technology">Technology</option>
+          <option value="Education">Education</option>
+          <option value="Finance">Finance</option>
+          <option value="Healthcare">Healthcare</option>
+        </select>
+        <label for="stage">Startup stage</label>
+        <select id="stage" required>
+          <option value="">Choose a stage</option>
+          <option value="Idea">Idea</option>
+          <option value="MVP">MVP</option>
+          <option value="Early Stage">Early Stage</option>
+          <option value="Growth">Growth</option>
+        </select>
+        <label for="location">Location</label>
+        <select id="location">
+          <option value="India">India</option>
+          <option value="Global">Global</option>
+        </select>
+        <button type="submit">Find matches</button>
+      </form>
+      <div id="matchResults" class="opportunity-list"></div>
+    </section>
+    <section id="assistant" class="section">
+      <h2>Ask the AI assistant</h2>
+      <p class="muted">Get help understanding startup opportunities.</p>
+      <form id="aiForm">
+        <textarea id="aiQuestion"
+          placeholder="How can I prepare to apply for a startup grant?"
+          required></textarea>
+        <button type="submit">Ask Grant Agent</button>
+      </form>
+      <div id="aiAnswer" class="answer" hidden></div>
+    </section>
+    <footer>
+      Grant Agent · Helping founders discover opportunities
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
